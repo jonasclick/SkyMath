@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ExerciseViewController.swift
 //  MentalMath
 //
 //  Created by Jonas Vetsch on 26.09.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ExerciseViewController: UIViewController {
+class ExerciseViewController: UIViewController, KeyboardCollectionViewControllerDelegate {
     
     var exerciseType: ExerciseType
     
@@ -19,7 +19,6 @@ class ExerciseViewController: UIViewController {
         let label = UILabel()
         label.text = ""
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .label
         return label
     }()
     
@@ -27,30 +26,30 @@ class ExerciseViewController: UIViewController {
         let label = UILabel()
         label.text = "Do good and good will come your way."
         label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .label
         return label
     }()
     
     let scoreLabel: UILabel = {
         let label = UILabel()
         label.text = ""
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .label
+        label.font = UIFont.preferredFont(forTextStyle: .body)
         return label
     }()
     
     let question: UILabel = {
         let label = UILabel()
         label.text = ""
-        label.font = UIFont.preferredFont(forTextStyle: .headline)
-        label.textColor = .label
+        label.font = UIFont.preferredFont(forTextStyle: .title1)
         return label
     }()
     
     let answerField: UITextField = {
         let field = UITextField()
-        field.keyboardType = .numberPad
+        field.keyboardType = .decimalPad
         field.textAlignment = .center
+        field.tintColor = .clear // Hide cursor when editing.
+        field.font = UIFont.preferredFont(forTextStyle: .title3)
+        field.isUserInteractionEnabled = false // Disable user interaction
         return field
     }()
     
@@ -65,7 +64,7 @@ class ExerciseViewController: UIViewController {
         // Not using storyboards, so we say:
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +86,6 @@ class ExerciseViewController: UIViewController {
         answerField.translatesAutoresizingMaskIntoConstraints = false
         answerField.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         answerField.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-        answerField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         answerField.becomeFirstResponder()
         
         view.addSubview(question)
@@ -95,19 +93,66 @@ class ExerciseViewController: UIViewController {
         question.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         question.bottomAnchor.constraint(equalTo: answerField.topAnchor, constant: -15).isActive = true
         
-        
         view.addSubview(scoreLabel)
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         scoreLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         scoreLabel.bottomAnchor.constraint(equalTo: question.topAnchor, constant: -40).isActive = true
         
+        let keyboard = KeyboardCollectionViewController()
+        keyboard.delegate = self
+        addChild(keyboard)
+        view.addSubview(keyboard.view)
+        keyboard.view.translatesAutoresizingMaskIntoConstraints = false
+        keyboard.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        keyboard.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -70).isActive = true
+        keyboard.view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        keyboard.view.heightAnchor.constraint(equalToConstant: 230).isActive = true
+        keyboard.didMove(toParent: self)
+        
         setProblem()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(saveDataBeforeBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+
     }
     
-    func setProblem() {
-        let int1 = Int.random(in: 1...99)
-        let int2 = Int.random(in: 1...99)
+    // Handle Key Tap from KeyboardCollectionViewController and evaluate answer
+    func onKeyTapped(_ key: String) {
+        switch key {
+        case "⌫":
+            if !answerField.text!.isEmpty {
+                answerField.text?.removeLast()
+            }
+        case "–":
+            // Handle "–" Tap
+            if let text = answerField.text, !text.contains("-") {
+                answerField.text = "-" + text
+            }
+            else if let text = answerField.text, text.contains("-") {
+                answerField.text?.removeFirst()
+            }
+            
+            // Check if the "-" made the answer correct
+            if let text = answerField.text, let answer = Int(text), answer == currentSolution {
+                setProblem()
+                updateScore()
+            }
+        default:
+            answerField.text?.append(key)
+            
+            // Check if answer is correct
+            if let text = answerField.text, let answer = Int(text), answer == currentSolution {
+                setProblem()
+                updateScore()
+            }
+        }
+    }
+    
+    // Create a new problem for the user to answer
+    private func setProblem() {
+        let int1 = Int.random(in: 3...99)
+        let int2 = Int.random(in: 3...99)
         
+        question.text = "\(int1) \(exerciseType.symbol) \(int2)"
         currentSolution = {
             switch exerciseType {
             case .addition:
@@ -117,32 +162,37 @@ class ExerciseViewController: UIViewController {
             case .multiplication:
                 return int1 * int2
             case .division:
-                return int1 / int2
+                let product = int1 * int2
+                question.text = "\(product) \(exerciseType.symbol) \(int1)"
+                return product / int1
             }
         }()
         
-        question.text = "\(int1) \(exerciseType.symbol) \(int2)"
         answerField.text = ""
     }
     
-    func updateScore() {
+    // Update score in this exercise
+    private func updateScore() {
         score += 1
         scoreLabel.text = "\(score)"
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
-        if let text = textField.text, let answer = Int(text), answer == currentSolution {
-            setProblem()
-            updateScore()
-        }
+    // Save score of the exercise to the total score (HomeView)
+    private func saveScore() {
+        let previousScore = UserDefaults.standard.integer(forKey: "userScore")
+        UserDefaults.standard.set(previousScore + score, forKey: "userScore")
+        score = 0
     }
     
     // Update Total User Score when ending the exercise
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        let previousScore = UserDefaults.standard.integer(forKey: "userScore")
-        UserDefaults.standard.set(previousScore + score, forKey: "userScore")
+        saveScore()
+    }
+    
+    // When user goes to home screen, save score to prevent losing it.
+    @objc private func saveDataBeforeBackground() {
+        saveScore()
     }
 }
 

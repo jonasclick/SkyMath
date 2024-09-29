@@ -15,28 +15,22 @@ class HomeViewController: UIViewController {
         let label = UILabel()
         label.text = "Welcome"
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .label
         return label
     }()
     
     let subtitle: UILabel = {
         let label = UILabel()
-        label.text = "Hi, Jonas"
-        label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .label
+        label.text = ""
+        label.font = UIFont.preferredFont(forTextStyle: .title3)
         return label
     }()
     
     let scoreLabel: UILabel = {
         let label = UILabel()
         label.text = ""
-        label.font = UIFont.preferredFont(forTextStyle: .headline)
-        label.textColor = .label
+        label.font = UIFont.preferredFont(forTextStyle: .title3)
         return label
     }()
-    
-    let exercisesViewController = ExercisesCollectionViewController()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,19 +59,36 @@ class HomeViewController: UIViewController {
         subtitle.translatesAutoresizingMaskIntoConstraints = false
         subtitle.topAnchor.constraint(equalTo: mainTitle.bottomAnchor, constant: 5).isActive = true
         subtitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
+        setSubtitle()
         
         view.addSubview(scoreLabel)
         scoreLabel.translatesAutoresizingMaskIntoConstraints = false
         scoreLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: 0).isActive = true
         scoreLabel.topAnchor.constraint(equalTo: subtitle.bottomAnchor, constant: 90).isActive = true
         
-        addChild(exercisesViewController)
-        view.addSubview(exercisesViewController.view)
-        exercisesViewController.view.translatesAutoresizingMaskIntoConstraints = false
-        exercisesViewController.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        exercisesViewController.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
-        exercisesViewController.view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        exercisesViewController.view.heightAnchor.constraint(equalToConstant: (80 + 16) * 5 + 16).isActive = true
+        let exercieses = ExercisesCollectionViewController()
+        addChild(exercieses)
+        view.addSubview(exercieses.view)
+        exercieses.didMove(toParent: self)
+        exercieses.view.translatesAutoresizingMaskIntoConstraints = false
+        exercieses.view.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        exercieses.view.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30).isActive = true
+        exercieses.view.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        exercieses.view.heightAnchor.constraint(equalToConstant: (80 + 16) * 4 + 16).isActive = true
+    }
+    
+    private func setSubtitle() {
+        let currentDate = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: currentDate)
+        
+        if hour > 18 {
+            subtitle.text = "Good Evening, Jonas"
+        } else if hour > 12 {
+            subtitle.text = "Good Afternoon, Jonas"
+        } else {
+            subtitle.text = "Good Morning, Jonas"
+        }
     }
     
     private func getScore() {

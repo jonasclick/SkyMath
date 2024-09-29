@@ -17,7 +17,6 @@ class AdditionViewController: UIViewController {
         let label = UILabel()
         label.text = "Addition"
         label.font = UIFont.preferredFont(forTextStyle: .largeTitle)
-        label.textColor = .label
         return label
     }()
     
@@ -25,7 +24,6 @@ class AdditionViewController: UIViewController {
         let label = UILabel()
         label.text = "Do good and good will come your way."
         label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .label
         return label
     }()
     
@@ -33,7 +31,6 @@ class AdditionViewController: UIViewController {
         let label = UILabel()
         label.text = ""
         label.font = UIFont.preferredFont(forTextStyle: .subheadline)
-        label.textColor = .label
         return label
     }()
     
@@ -41,7 +38,6 @@ class AdditionViewController: UIViewController {
         let label = UILabel()
         label.text = ""
         label.font = UIFont.preferredFont(forTextStyle: .headline)
-        label.textColor = .label
         return label
     }()
     

@@ -11,10 +11,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DD41FA062CA5BF3B000847D4 /* Exceptions for "MentalMath" folder in "MentalMath" target */ = {
+		DD0FFA402CA8192300929110 /* Exceptions for "MentalMath" folder in "MentalMath" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Ressources/Info.plist,
+				Info.plist,
 			);
 			target = DD41F9F32CA5BF3A000847D4 /* MentalMath */;
 		};
@@ -24,7 +24,7 @@
 		DD41F9F62CA5BF3A000847D4 /* MentalMath */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				DD41FA062CA5BF3B000847D4 /* Exceptions for "MentalMath" folder in "MentalMath" target */,
+				DD0FFA402CA8192300929110 /* Exceptions for "MentalMath" folder in "MentalMath" target */,
 			);
 			path = MentalMath;
 			sourceTree = "<group>";
@@ -146,8 +146,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5RLQ565RC5;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MentalMath/Ressources/Info.plist;
+				INFOPLIST_FILE = MentalMath/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -174,8 +175,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 5RLQ565RC5;
+				DONT_GENERATE_INFOPLIST_FILE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MentalMath/Ressources/Info.plist;
+				INFOPLIST_FILE = MentalMath/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
