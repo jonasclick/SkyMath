@@ -5,8 +5,6 @@ SkyMath is a mental math training app for sailplane pilots. SkyMath is written f
 
 I specifically made SkyMath to get experience with UIKit which is Swift's older UI framework. Although SwiftUI has some key advantages, UIKit is still widely used in iOS Apps as it offers a lot more control over the UI and is therefore still important to know, even in 2025 :-)
 
-![Screenshot of SkyMath's Home Screen](https://github.com/jonasclick/hosting-images/blob/main/SkyMath%20Screenshot%201.PNG)
-
 <img src="https://github.com/jonasclick/hosting-images/blob/main/SkyMath%20EN%20v1.png" alt="Image of the SkySoar App" style="max-width: 100%; height: auto;">
 
 ## Key Features
