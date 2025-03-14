@@ -66,7 +66,7 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
     view.addSubview(mainTitle)
     mainTitle.translatesAutoresizingMaskIntoConstraints = false
     mainTitle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-    mainTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: 84).isActive = true
+    mainTitle.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
     
     view.addSubview(adjustName)
     adjustName.translatesAutoresizingMaskIntoConstraints = false

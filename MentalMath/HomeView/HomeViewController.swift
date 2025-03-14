@@ -82,7 +82,7 @@ class HomeViewController: UIViewController {
     view.addSubview(settingsButton)
     settingsButton.translatesAutoresizingMaskIntoConstraints = false
     settingsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
-    settingsButton.topAnchor.constraint(equalTo: mainTitle.topAnchor, constant: 10).isActive = true
+    settingsButton.topAnchor.constraint(equalTo: mainTitle.topAnchor, constant: 30).isActive = true
     settingsButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
     
     view.addSubview(scoreLabel)
