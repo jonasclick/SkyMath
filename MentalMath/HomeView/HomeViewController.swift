@@ -108,11 +108,11 @@ class HomeViewController: UIViewController {
     let name = UserDefaults.standard.string(forKey: "userName") ?? ""
     
     if hour > 18 {
-      subtitle.text = "Good Evening, \(name)"
+      subtitle.text = "Good Evening\(name)"
     } else if hour > 12 {
-      subtitle.text = "Good Afternoon, \(name)"
+      subtitle.text = "Good Afternoon\(name)"
     } else {
-      subtitle.text = "Good Morning, \(name)"
+      subtitle.text = "Good Morning\(name)"
     }
   }
   

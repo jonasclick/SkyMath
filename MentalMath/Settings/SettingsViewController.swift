@@ -94,7 +94,18 @@ class SettingsViewController: UIViewController, UITextFieldDelegate {
   }
   
   @objc private func setUsername() {
-    UserDefaults.standard.set(nameField.text, forKey: "userName")
+    let trimmedName = nameField.text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+    
+    if trimmedName.isEmpty {
+      UserDefaults.standard.set(trimmedName, forKey: "userName")
+    } else {
+      UserDefaults.standard.set(", " + trimmedName, forKey: "userName")
+    }
+    
+    if nameField.text == "" {
+      
+    } else {
+    }
     navigationController?.popViewController(animated: true)
   }
   

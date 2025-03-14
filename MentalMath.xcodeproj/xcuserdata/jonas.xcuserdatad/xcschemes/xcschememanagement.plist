@@ -9,11 +9,6 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>MentalMath copy.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
-		</dict>
 		<key>Promises (Playground).xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -33,6 +28,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>DD41F9F32CA5BF3A000847D4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DD7308312D840391005240EA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
