@@ -5,7 +5,7 @@ SkySolve is a mental math and unit conversion training app for sailplane pilots.
 
 I specifically made SkySolve to get experience with UIKit which is Swift's older UI framework. Although SwiftUI has some key advantages, UIKit is still widely used in iOS Apps as it offers a lot more control over the UI and is therefore still important to know, even in 2025 :-)
 
-<img src="https://github.com/jonasclick/hosting-images/blob/main/SkyMath%20EN%20v1.png" alt="Image of the SkySoar App" style="max-width: 100%; height: auto;">
+<img src="https://github.com/jonasclick/hosting-images/blob/main/SkySolve%20Promo%20Image%20EN%20v1.png" alt="Image of the SkySoar App" style="max-width: 100%; height: auto;">
 
 ## Key Features
 
