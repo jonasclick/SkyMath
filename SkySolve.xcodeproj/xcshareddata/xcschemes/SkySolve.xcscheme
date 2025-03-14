@@ -16,9 +16,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DD41F9F32CA5BF3A000847D4"
-               BuildableName = "MentalMath.app"
-               BlueprintName = "MentalMath"
-               ReferencedContainer = "container:MentalMath.xcodeproj">
+               BuildableName = "SkySolve.app"
+               BlueprintName = "SkySolve"
+               ReferencedContainer = "container:SkySolve.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD41F9F32CA5BF3A000847D4"
-            BuildableName = "MentalMath.app"
-            BlueprintName = "MentalMath"
-            ReferencedContainer = "container:MentalMath.xcodeproj">
+            BuildableName = "SkySolve.app"
+            BlueprintName = "SkySolve"
+            ReferencedContainer = "container:SkySolve.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD41F9F32CA5BF3A000847D4"
-            BuildableName = "MentalMath.app"
-            BlueprintName = "MentalMath"
-            ReferencedContainer = "container:MentalMath.xcodeproj">
+            BuildableName = "SkySolve.app"
+            BlueprintName = "SkySolve"
+            ReferencedContainer = "container:SkySolve.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

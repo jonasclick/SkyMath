@@ -37,19 +37,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		DD41F9F42CA5BF3A000847D4 /* MentalMath.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MentalMath.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD41F9F42CA5BF3A000847D4 /* SkySolve.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkySolve.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCB359A2CB23DD600393696 /* LockScreenWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = LockScreenWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDCB359C2CB23DD600393696 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		DDCB359E2CB23DD600393696 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		DD0FFA402CA8192300929110 /* Exceptions for "MentalMath" folder in "MentalMath" target */ = {
+		DD0FFA402CA8192300929110 /* Exceptions for "SkySolve" folder in "SkySolve" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = DD41F9F32CA5BF3A000847D4 /* MentalMath */;
+			target = DD41F9F32CA5BF3A000847D4 /* SkySolve */;
 		};
 		DDCB35B52CB23DD700393696 /* Exceptions for "LockScreenWidget" folder in "LockScreenWidgetExtension" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
@@ -61,12 +61,12 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		DD41F9F62CA5BF3A000847D4 /* MentalMath */ = {
+		DD41F9F62CA5BF3A000847D4 /* SkySolve */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				DD0FFA402CA8192300929110 /* Exceptions for "MentalMath" folder in "MentalMath" target */,
+				DD0FFA402CA8192300929110 /* Exceptions for "SkySolve" folder in "SkySolve" target */,
 			);
-			path = MentalMath;
+			path = SkySolve;
 			sourceTree = "<group>";
 		};
 		DDCB35A02CB23DD600393696 /* LockScreenWidget */ = {
@@ -102,7 +102,7 @@
 		DD41F9EB2CA5BF3A000847D4 = {
 			isa = PBXGroup;
 			children = (
-				DD41F9F62CA5BF3A000847D4 /* MentalMath */,
+				DD41F9F62CA5BF3A000847D4 /* SkySolve */,
 				DDCB35A02CB23DD600393696 /* LockScreenWidget */,
 				DDCB359B2CB23DD600393696 /* Frameworks */,
 				DD41F9F52CA5BF3A000847D4 /* Products */,
@@ -112,7 +112,7 @@
 		DD41F9F52CA5BF3A000847D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD41F9F42CA5BF3A000847D4 /* MentalMath.app */,
+				DD41F9F42CA5BF3A000847D4 /* SkySolve.app */,
 				DDCB359A2CB23DD600393696 /* LockScreenWidgetExtension.appex */,
 			);
 			name = Products;
@@ -130,9 +130,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DD41F9F32CA5BF3A000847D4 /* MentalMath */ = {
+		DD41F9F32CA5BF3A000847D4 /* SkySolve */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD41FA072CA5BF3B000847D4 /* Build configuration list for PBXNativeTarget "MentalMath" */;
+			buildConfigurationList = DD41FA072CA5BF3B000847D4 /* Build configuration list for PBXNativeTarget "SkySolve" */;
 			buildPhases = (
 				DD41F9F02CA5BF3A000847D4 /* Sources */,
 				DD41F9F12CA5BF3A000847D4 /* Frameworks */,
@@ -145,13 +145,13 @@
 				DDCB35AF2CB23DD700393696 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				DD41F9F62CA5BF3A000847D4 /* MentalMath */,
+				DD41F9F62CA5BF3A000847D4 /* SkySolve */,
 			);
-			name = MentalMath;
+			name = SkySolve;
 			packageProductDependencies = (
 			);
 			productName = MentalMath;
-			productReference = DD41F9F42CA5BF3A000847D4 /* MentalMath.app */;
+			productReference = DD41F9F42CA5BF3A000847D4 /* SkySolve.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DDCB35992CB23DD600393696 /* LockScreenWidgetExtension */ = {
@@ -194,7 +194,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DD41F9EF2CA5BF3A000847D4 /* Build configuration list for PBXProject "MentalMath" */;
+			buildConfigurationList = DD41F9EF2CA5BF3A000847D4 /* Build configuration list for PBXProject "SkySolve" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -210,7 +210,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DD41F9F32CA5BF3A000847D4 /* MentalMath */,
+				DD41F9F32CA5BF3A000847D4 /* SkySolve */,
 				DDCB35992CB23DD600393696 /* LockScreenWidgetExtension */,
 			);
 		};
@@ -270,8 +270,8 @@
 				DEVELOPMENT_TEAM = 5RLQ565RC5;
 				DONT_GENERATE_INFOPLIST_FILE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MentalMath/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SkyMath;
+				INFOPLIST_FILE = SkySolve/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SkySolve;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -284,7 +284,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jonas-Vetsch.SkyMath";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonas-Vetsch.SkySolve";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -303,8 +303,8 @@
 				DEVELOPMENT_TEAM = 5RLQ565RC5;
 				DONT_GENERATE_INFOPLIST_FILE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MentalMath/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = SkyMath;
+				INFOPLIST_FILE = SkySolve/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SkySolve;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -317,7 +317,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jonas-Vetsch.SkyMath";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonas-Vetsch.SkySolve";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -377,6 +377,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -434,6 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -462,7 +464,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jonas-Vetsch.SkyMath.LockScreenWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonas-Vetsch.SkySolve.LockScreenWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -489,7 +491,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Jonas-Vetsch.SkyMath.LockScreenWidget";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jonas-Vetsch.SkySolve.LockScreenWidget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -501,7 +503,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DD41F9EF2CA5BF3A000847D4 /* Build configuration list for PBXProject "MentalMath" */ = {
+		DD41F9EF2CA5BF3A000847D4 /* Build configuration list for PBXProject "SkySolve" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD41FA0A2CA5BF3B000847D4 /* Debug */,
@@ -510,7 +512,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DD41FA072CA5BF3B000847D4 /* Build configuration list for PBXNativeTarget "MentalMath" */ = {
+		DD41FA072CA5BF3B000847D4 /* Build configuration list for PBXNativeTarget "SkySolve" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DD41FA082CA5BF3B000847D4 /* Debug */,

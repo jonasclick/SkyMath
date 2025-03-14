@@ -19,7 +19,7 @@
                BlueprintIdentifier = "DDCB35992CB23DD600393696"
                BuildableName = "LockScreenWidgetExtension.appex"
                BlueprintName = "LockScreenWidgetExtension"
-               ReferencedContainer = "container:MentalMath.xcodeproj">
+               ReferencedContainer = "container:SkySolve.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -31,9 +31,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DD41F9F32CA5BF3A000847D4"
-               BuildableName = "MentalMath.app"
-               BlueprintName = "MentalMath"
-               ReferencedContainer = "container:MentalMath.xcodeproj">
+               BuildableName = "SkySolve.app"
+               BlueprintName = "SkySolve"
+               ReferencedContainer = "container:SkySolve.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -65,16 +65,16 @@
             BlueprintIdentifier = "DDCB35992CB23DD600393696"
             BuildableName = "LockScreenWidgetExtension.appex"
             BlueprintName = "LockScreenWidgetExtension"
-            ReferencedContainer = "container:MentalMath.xcodeproj">
+            ReferencedContainer = "container:SkySolve.xcodeproj">
          </BuildableReference>
       </RemoteRunnable>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD41F9F32CA5BF3A000847D4"
-            BuildableName = "MentalMath.app"
-            BlueprintName = "MentalMath"
-            ReferencedContainer = "container:MentalMath.xcodeproj">
+            BuildableName = "SkySolve.app"
+            BlueprintName = "SkySolve"
+            ReferencedContainer = "container:SkySolve.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <EnvironmentVariables>
@@ -108,9 +108,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DD41F9F32CA5BF3A000847D4"
-            BuildableName = "MentalMath.app"
-            BlueprintName = "MentalMath"
-            ReferencedContainer = "container:MentalMath.xcodeproj">
+            BuildableName = "SkySolve.app"
+            BlueprintName = "SkySolve"
+            ReferencedContainer = "container:SkySolve.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

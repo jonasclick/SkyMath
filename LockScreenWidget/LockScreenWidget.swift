@@ -54,7 +54,7 @@ struct LockScreenWidget: Widget {
         .containerBackground(.fill.tertiary, for: .widget)
     }
     .configurationDisplayName("Quick Access")
-    .description("Launch SkyMath from the lock screen")
+    .description("Launch SkySolve from the lock screen")
     .supportedFamilies([.accessoryCircular])
   }
 }
