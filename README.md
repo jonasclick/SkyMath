@@ -1,17 +1,17 @@
 
-# SkyMath
+# SkySolve
 
-SkyMath is a mental math training app for sailplane pilots. SkyMath is written for iPhone in Swift mostly using **UIKit** and includes a **widget** for quick access from the lock screen of the iPhone.
+SkySolve is a mental math and unit conversion training app for sailplane pilots. SkySolve is written for iPhone in Swift mostly using **UIKit** and includes a **widget** for quick access from the lock screen of the iPhone.
 
-I specifically made SkyMath to get experience with UIKit which is Swift's older UI framework. Although SwiftUI has some key advantages, UIKit is still widely used in iOS Apps as it offers a lot more control over the UI and is therefore still important to know, even in 2025 :-)
+I specifically made SkySolve to get experience with UIKit which is Swift's older UI framework. Although SwiftUI has some key advantages, UIKit is still widely used in iOS Apps as it offers a lot more control over the UI and is therefore still important to know, even in 2025 :-)
 
 <img src="https://github.com/jonasclick/hosting-images/blob/main/SkyMath%20EN%20v1.png" alt="Image of the SkySoar App" style="max-width: 100%; height: auto;">
 
 ## Key Features
 
 - 📱 **UIKit-Based UI** – Built using UIKit for precise and efficient interface control.
-- 🧮 **Custom Math Trainer** – Generates tailored math problems to challenge users.
-- 🔢 **Instant Submit** – Submits the answer automatically when entered correctly for efficient practice sessions
+- 🧮 **Custom Math Trainer** – Generates tailored math problems and unit conversion exercises to challenge users.
+- 🔢 **Instant Submit** – Submits the answer automatically when entered correctly for efficient practice sessions.
 - 📊 **Score Tracking** – Collect points with every correct answer.
 - 🔒 **Lock Screen Widget** – Get in a few reps when on the go: Quick access from your lock screen.
 
